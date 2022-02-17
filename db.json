@@ -1,0 +1,103 @@
+{
+  "posts": [
+    {
+      "id": "23",
+      "title": "ggggggggggg updated 1",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "desc": "ahihihihi",
+      "catePostId": "1"
+    },
+    {
+      "id": "24",
+      "title": "ggggggggggg updated 2",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "desc": "ahihihihi",
+      "catePostId": "1"
+    },
+    {
+      "id": "26",
+      "title": "ggggggggggg updated 4",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "desc": "ahihihihi",
+      "catePostId": "2"
+    },
+    {
+      "title": "fg",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645088385/vyloid9ozbfekvfzhy0k.jpg",
+      "desc": "è",
+      "id": "qrPABbo"
+    },
+    {
+      "title": "trần thị kiều",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645088560/mu48epscmxyhlyykxnau.jpg",
+      "desc": "sdf",
+      "id": "3hCmqwU"
+    }
+  ],
+  "catePosts": [
+    {
+      "id": "1",
+      "name": "Danh muc bai viet 1"
+    },
+    {
+      "id": "2",
+      "name": "Danh muc bai viet 2"
+    }
+  ],
+  "users": [
+    {
+      "email": "keninsta01@gmail.com",
+      "password": "$2a$10$LpnSkC5lEYiODNDBQYT7suO2i928rV4gDNMtYePybRv0.PjURdfsO",
+      "username": "datlt2306",
+      "id": 1
+    },
+    {
+      "email": "keninsta02@gmail.com",
+      "password": "$2a$10$dQTjGYR2yJXGqpWPfgnaNOBW0Ak0QxK1VX2IXVxRxUeA50oCu7W42",
+      "username": "datlt23061",
+      "id": 2
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$o0owcqUXFS0UpK5.ciDwT.LIXFUAXvaIYKgT/ljV5UR4SKhFpOTTK",
+      "username": "admin",
+      "id": 3
+    },
+    {
+      "email": "dactrong2001@gmail.com",
+      "password": "$2a$10$p63G9/IGd1tO/65zoo4H0u/2rY8CrUdZKz1pkmo6qIsSujLSEwwn6",
+      "username": "admin",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": "23",
+      "name": "ggggggggggg updated 1",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "desc": "ahihihihi",
+      "price": "100"
+    },
+    {
+      "id": "24",
+      "name": "ggggggggggg updated 2",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "desc": "ahihihihi",
+      "price": "200"
+    },
+    {
+      "id": "25",
+      "name": "ggggggggggg updated 3",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "desc": "ahihihihi",
+      "price": "300"
+    },
+    {
+      "id": "26",
+      "name": "ggggggggggg updated 4",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "desc": "ahihihihi",
+      "price": "400"
+    }
+  ]
+}

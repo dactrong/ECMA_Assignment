@@ -4,23 +4,18 @@ module.exports = {
         "es2021": true
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
+        "airbnb-base",
     ],
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+        ecmaVersion:13,
+        sourceType:"module",
     },
-    "plugins": [
-        "react"
-    ],
+    
     "rules": {
         semi:["error", "always"],
-        quotes:["error",4],
-        indent:["error","never"],
+        quotes:["error","double", { "allowTemplateLiterals": true }],
+        indent:["error","4"],
+        "eol-last": ["error","never"],
         "linebreack-style":0
     },
 }
