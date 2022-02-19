@@ -1,22 +1,22 @@
-import instance from "./instance";
+import instance from './config';
 
 export const getAll = () => {
-    const url = "/products";
-    return instance.get(url)
+    const url = '/products';
+    return instance.get(url);
 }
 export const get = (id) => {
     const url = `/products/${id}`;
     return instance.get(url);
 }
-export const add = (product) => {
-    const url = `/products`
-    return instance.post(url, product)
-}
 export const remove = (id) => {
     const url = `/products/${id}`;
-    return instance.delete(url);
+    return instance.detele(url);
 }
-export const update = (post) => {
+export const add = (product) => {
+    const url = `/products`;
+    return instance.post(url, product);
+}
+export const edit = (post) => {
     const url = `/products/${post.id}`;
     return instance.put(url, post);
 }

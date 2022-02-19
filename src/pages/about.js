@@ -1,14 +1,9 @@
-import Footer from "../components/footer";
-import Header from "../components/header";
-
-const About = {
-    render(){
-      return/* html*/`
-      ${Header.render()}
-      <h1 class = "bg-black">helo</h1>
-      ${Footer.render()}
-      `;
-    }
-  }
-
-  export default About;
+const AboutPage = {
+    render() {
+        return /* html */`
+        <div class="max-w-5xl mx-auto">
+            <h1>About Page</h1>
+        </div>`;
+    },
+};
+export default AboutPage;

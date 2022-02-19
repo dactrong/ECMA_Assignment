@@ -2,10 +2,9 @@
   "posts": [
     {
       "id": "23",
-      "title": "ggggggggggg updated 1",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
-      "desc": "ahihihihi",
-      "catePostId": "1"
+      "title": "Trần thị Kiều",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645259989/t4l9sgzmwfe4tpjf0qts.jpg",
+      "desc": "ahihihihi đạp ănms"
     },
     {
       "id": "24",
@@ -85,6 +84,21 @@
       "email": "trankieu2003@gmail.com",
       "password": "$2a$10$3c/QbYnPrfJsGNXvzfCiUeUagxl0bp2CpSNCk0/OMw/e8mo8PXdWC",
       "id": 6
+    },
+    {
+      "email": "ajhsgdhsd@gmail.com",
+      "password": "$2a$10$9JnJklz1MJ2.1JECvaLTLuITJISPI9YAyE.bAX8lNnqLd.YOfAEZO",
+      "id": 7
+    },
+    {
+      "email": "dactrong1@gmail.com",
+      "password": "$2a$10$lDsTOd5T5zO0tJpthAseR.ii5FqaCcYVDeg0plp.3ve8BrcqMxUji",
+      "id": 8
+    },
+    {
+      "email": "dactrong2003@gmail.com",
+      "password": "$2a$10$0LDyoHDj5CYZT.x2j5BXCu/PN8atNxWh0devXxIgf5Rfj1HFNcyVG",
+      "id": 9
     }
   ],
   "products": [

@@ -1,10 +1,10 @@
-import instance from './instance';
+import instance from './config';
 
-export const signup = (users) => {
-    const url = "/signup";
-    instance.post(url, users);
+export const signup = (user) => {
+    const url = `/signup`;
+    return instance.post(url, user)
 }
-export const signin = (users) => {
-    const url = "/signin";
-    instance.post(url, users);
+export const signin = (user) => {
+    const url = `/signin`;
+    return instance.post(url, user)
 }

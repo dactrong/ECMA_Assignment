@@ -1,6 +1,6 @@
 // import data from "../data";
 
-import { getAll } from '../api/post';
+import { getAll } from '../api/posts';
 
 const NewList ={
   async render() {
