@@ -1,6 +1,10 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
+
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 import { signin } from "../api/user";
+
 
 const Signin ={
 
@@ -22,7 +26,7 @@ const Signin ={
             <div class="rounded-md shadow-sm -space-y-px">
               <div>
                 <label for="email-address" class="sr-only">Email </label>
-                <input id="email-address" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+                <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
               </div>
               <div>
                 <label for="password" class="sr-only">Password</label>
@@ -59,21 +63,46 @@ const Signin ={
         
         `  
      },
-     afterRender(){
-      const formSignin = document.querySelector('#formSignin');
-      formSignin.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          try {
-              const data = await signin({
-                  email: document.querySelector('#email-address').value,
-                  password: document.querySelector('#password').value
-              });
-              console.log(data);
-          } catch (error) {
-              console.log(error);
-          }
+     
+    //  afterRender(){
+//       const formSignin = document.querySelector('#formSignin');
+//       formSignin.addEventListener('submit', async (e) => {
+//           e.preventDefault();
+//           try {
+//               const { data } = await signin({
+//                   email: document.querySelector('#email').value,
+//                   password: document.querySelector('#password').value,
+//               });
+//               if(data){
+//                   console.log(data.users);
+//                   // Lưu thông tin user vào localStorage
+//                   localStorage.setItem("user", JSON.stringify(data.users));
+//                   toastr.success("Đăng nhập thành công, chuyển trang sau 2s");
+//                   setTimeout(() => {
+//                       document.location.href="/"
+//                   }, 2000)
+//               }
+
+//           } catch (error) {
+//               toastr.error(error.response.data);
+//           }
           
-      })
-  }
+//       })
+//   }
+//
+afterRender() {
+  const formSignup = document.querySelector('#formSignin');
+  formSignup.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const {data} = await signin({
+    
+      email: document.querySelector('#email').value,
+      password: document.querySelector('#password').value,
+    
+    })
+    // console.log(data);
+    document.location.href = "/";
+  });
+}
 }
 export default Signin;

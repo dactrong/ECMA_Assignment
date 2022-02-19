@@ -1,6 +1,8 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
 import { signup } from "../api/user";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 const Lognin ={
 
     render(){
@@ -66,19 +68,20 @@ const Lognin ={
       const formSignup = document.querySelector('#formSignup');
       formSignup.addEventListener('submit', async (e) => {
           e.preventDefault();
-
           try {
-              const data = await signup({
-                  username: document.querySelector('#username').value,
+              const { data } = await signup({
                   email: document.querySelector('#email').value,
-                  password: document.querySelector('#password').value
+                  password: document.querySelector('#password').value,
               });
-              console.log(data);
+              if(data){
+
+                      document.location.href="/signin"
+              }    
           } catch (error) {
-              console.log(error);
+              console.log(error.response);
           }
           
       })
-    }
+  }
 };
 export default Lognin;
