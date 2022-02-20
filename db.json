@@ -51,54 +51,25 @@
   ],
   "users": [
     {
-      "email": "keninsta01@gmail.com",
-      "password": "$2a$10$LpnSkC5lEYiODNDBQYT7suO2i928rV4gDNMtYePybRv0.PjURdfsO",
-      "username": "datlt2306",
+      "email": "abc@gmail.com",
+      "password": "$2a$10$tRDZd/b1r4Lflm393FrMmOpg/sK1.kX5dzICdgP.bJ2wMDLaz1z8y",
+      "username": "trong",
+      "phone": "1123123123",
       "id": 1
     },
     {
-      "email": "keninsta02@gmail.com",
-      "password": "$2a$10$dQTjGYR2yJXGqpWPfgnaNOBW0Ak0QxK1VX2IXVxRxUeA50oCu7W42",
-      "username": "datlt23061",
+      "email": "dactrong2001@gmail.com",
+      "password": "$2a$10$Omd5H9mI9B93XRO4Y.Dl/uXUNeKlTuyjjfYtWEoIm65yzE6NXtDY.",
+      "username": "Nguyễn Đắc Trọng",
+      "phone": "0963209332",
       "id": 2
     },
     {
-      "email": "admin@gmail.com",
-      "password": "$2a$10$o0owcqUXFS0UpK5.ciDwT.LIXFUAXvaIYKgT/ljV5UR4SKhFpOTTK",
-      "username": "admin",
+      "email": "trongndph13723@fpt.edu.vn",
+      "password": "$2a$10$1iYWf7CfRwoWKgiKDC8ElOAj.4grEJIZ58kuCQpS6.iZumHrQEqwO",
+      "username": "Nguyễn Đắc Trọng",
+      "phone": "0963209332",
       "id": 3
-    },
-    {
-      "email": "dactrong2001@gmail.com",
-      "password": "$2a$10$p63G9/IGd1tO/65zoo4H0u/2rY8CrUdZKz1pkmo6qIsSujLSEwwn6",
-      "username": "admin",
-      "id": 4
-    },
-    {
-      "email": "dactrong@gmail.com",
-      "password": "$2a$10$M5tuCHIjLnCi0NiK0E8LAeg.otGrRgmb.M/a6ezyEgtQJSa3UkMhK",
-      "username": "dactrong",
-      "id": 5
-    },
-    {
-      "email": "trankieu2003@gmail.com",
-      "password": "$2a$10$3c/QbYnPrfJsGNXvzfCiUeUagxl0bp2CpSNCk0/OMw/e8mo8PXdWC",
-      "id": 6
-    },
-    {
-      "email": "ajhsgdhsd@gmail.com",
-      "password": "$2a$10$9JnJklz1MJ2.1JECvaLTLuITJISPI9YAyE.bAX8lNnqLd.YOfAEZO",
-      "id": 7
-    },
-    {
-      "email": "dactrong1@gmail.com",
-      "password": "$2a$10$lDsTOd5T5zO0tJpthAseR.ii5FqaCcYVDeg0plp.3ve8BrcqMxUji",
-      "id": 8
-    },
-    {
-      "email": "dactrong2003@gmail.com",
-      "password": "$2a$10$0LDyoHDj5CYZT.x2j5BXCu/PN8atNxWh0devXxIgf5Rfj1HFNcyVG",
-      "id": 9
     }
   ],
   "products": [

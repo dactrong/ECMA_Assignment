@@ -17,10 +17,10 @@ const print = async (content, id) => {
     document.getElementById("app").innerHTML = await content.render(id);
     if(content.afterRender) await content.afterRender(id);
 };
-router.on("/dactrong/*", () => {}, {
+router.on("/dac/*", () => {}, {
     before: (done) =>{ 
         if(localStorage.getItem('user')){
-          
+            console.log('ahihi');
             const userId = JSON.parse(localStorage.getItem('user')).id;
             if(userId === 1){
                 done();

@@ -36,7 +36,7 @@ const Header = {
            </div>
            ${localStorage.getItem('user') ? /*html*/ `
            <ul class="flex">
-             <li class="flex items-center">Xin chao <a href="/" class="block px-4 py-3 hover:bg-blue-800 hover:text-white" id="email"></a></li>
+             <li class="flex items-center">Xin chao <a href="/" class="block px-4 py-3 hover:bg-blue-800 hover:text-white" id="username"></a></li>
              <li class="flex items-center"><a class="block px-4 py-3 hover:bg-blue-800 hover:text-white" id="logout">Logout</a></li>
          </ul>
          `: ""}
@@ -47,10 +47,10 @@ const Header = {
   afterRender() {
     // Lấy thông tin từ localStorage
     // Sử dụng JSON.parse để chuyển đổi chuỗi sang object
-    const email = document.querySelector('#email');
+    const username = document.querySelector('#username');
     const logout = document.querySelector('#logout');
-    if (email) {
-      email.innerHTML = JSON.parse(localStorage.getItem('user')).email;
+    if (username) {
+      username.innerHTML = JSON.parse(localStorage.getItem('user')).username;
     }
     if (logout) {
       logout.addEventListener('click', function () {

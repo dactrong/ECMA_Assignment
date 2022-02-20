@@ -41,5 +41,8 @@ const ProductPage = {
       ${Footer.render()}
         `;
     },
+    afterRender(){
+        Header.afterRender();
+    }
 };
 export default ProductPage;
