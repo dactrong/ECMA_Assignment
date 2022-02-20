@@ -10,6 +10,8 @@ import CartPage from "./pages/cart";
 import AdminPosts from "./pages/admin/posts";
 import AdminAddPosts from "./pages/admin/posts/add";
 import Navadmin from "./components/navAdmin";
+import NotFoundPage from "./pages/notFound";
+import AdminEditposts from "./pages/admin/posts/edit";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -44,3 +46,4 @@ router.on({
     "/cart": () => print(CartPage)
 });
 router.resolve();
+router.notFound(() => print(NotFoundPage));
