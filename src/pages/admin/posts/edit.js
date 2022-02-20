@@ -6,7 +6,7 @@ const AdminEditposts = {
     async render(id){
         const { data } = await get(id);
         console.log(data);
-        return `
+        return /*html*/`
         <div class="min-h-full">
         ${Navadmin.render()}
         <header class="bg-white shadow">

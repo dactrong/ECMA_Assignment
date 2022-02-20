@@ -13,9 +13,10 @@ export const addToCart = (newProduct, next) => {
     localStorage.setItem('cart', JSON.stringify(cart));
     next();
 }
-export const increaseQuantity = (id) => {
+export const increaseQuantity = (id,next) => {
     cart.find(item => item.id === id).quantity++;
     localStorage.setItem('cart', JSON.stringify(cart));
+    next();
 }
 export const decreaseQuantity = (id, next) => {
     const currentProduct = cart.find(item=> item.id === id);

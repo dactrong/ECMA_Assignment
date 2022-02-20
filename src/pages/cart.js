@@ -82,18 +82,20 @@ const CartPage = {
         const btns = document.querySelectorAll( '.btn');
         btns.forEach(button => {
             button.addEventListener('click', function(){
-                        const id = button.dataset.id;
-                        if(button.classList.contains('btn-increase')){
-                            increaseQuantity(id);
-                        } else if (button.classList.contains('btn-decrease')){
-                            decreaseQuantity(id, () => {
-                                reRender(CartPage, "#app");
-                            });
-                        } else { 
-                            removeItemInCart(id,  () => {
-                                reRender(CartPage, "#app");
-                            })
-                        }
+                    const id = button.dataset.id;
+                    if(button.classList.contains('btn-increase')){
+                        increaseQuantity(id, () => {
+                            reRender(CartPage, "#app");
+                        });
+                    } else if (button.classList.contains('btn-decrease')){
+                        decreaseQuantity(id, () => {
+                            reRender(CartPage, "#app");
+                        });
+                    } else { 
+                        removeItemInCart(id,  () => {
+                            reRender(CartPage, "#app");
+                    })
+                }
             })
         })
     }
