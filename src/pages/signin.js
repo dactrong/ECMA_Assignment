@@ -61,6 +61,7 @@ const Signin = {
         `
     },
     afterRender(){
+      Header.afterRender();
         const formSignin = document.querySelector('#formSignin');
         formSignin.addEventListener('submit', async (e) => {
             e.preventDefault();

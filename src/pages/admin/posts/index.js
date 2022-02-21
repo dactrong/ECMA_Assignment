@@ -10,7 +10,7 @@ const AdminPosts = {
         <header class="bg-white shadow">
         <div class="grid grid-cols-2 max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-bold text-gray-900">
-            News
+            Sản phẩm
             </h1>
             <div class="ml-80">
                 <span class="sm:ml-3">
@@ -62,8 +62,8 @@ const AdminPosts = {
                       ${response.data.map((post, index) => /* html */`
                       <tr>
                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                          <a href="/admin/posts/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-                          <button data-id="${post.id}" class="btn btn-remove">Remove</button>
+                          <a href="/admin/posts/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900 bg-lime-600 p-2 px-4 rounded-lg">Edit</a>
+                          <button data-id="${post.id}" class="btn btn-remove bg-red-600 p-2 px-4 rounded-lg">Xóa</button>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           ${index + 1}

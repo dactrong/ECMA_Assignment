@@ -1,4 +1,5 @@
 import { getAll } from '../../api/product';
+import Banner from '../../components/banner';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
 const ProductPage = {
@@ -6,9 +7,10 @@ const ProductPage = {
         const response = await getAll()
         return /* html */`
         ${Header.render()}
+        ${Banner.render()}
         <div class="bg-white">
         <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-          <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Customers also purchased</h2>
+          <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Sản phẩm mới nhất</h2>
           
           <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           ${response.data.map((product) => /*html*/ `
@@ -26,9 +28,9 @@ const ProductPage = {
                       ${product.name}
                     </a>
                   </h3>
-                  <p class="mt-1 text-sm text-gray-500">${product.desc}</p>
+                  <p class="mt-1 text-sm text-gray-500">Còn hàng</p>
                 </div>
-                <p class="text-sm font-medium text-gray-900">${product.price}VND</p>
+                <p class="text-sm font-medium text-gray-900">${product.price}$</p>
               </div>
             </div>
             `).join("")}

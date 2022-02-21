@@ -1,10 +1,13 @@
 import { signup } from "../api/user";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 const Signup = {
     render(){
         return  /*html*/`
+        ${Header.render()}
         <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
           <div>
@@ -62,10 +65,11 @@ const Signup = {
           </form>
         </div>
       </div>
-        
+        ${Footer.render()}
         `
     },
     afterRender(){
+      Header.afterRender();
         const formSignup = document.querySelector('#formSignup');
         formSignup.addEventListener('submit', async (e) => {
             e.preventDefault();
