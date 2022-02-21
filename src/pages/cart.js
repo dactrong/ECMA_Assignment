@@ -194,6 +194,7 @@ ${Header.render()}
   afterRender() {
     const btns = document.querySelectorAll('.btn');
     const tong = price * quantity;
+   
     btns.forEach(button => {
       button.addEventListener('click', function () {
         const id = button.dataset.id;

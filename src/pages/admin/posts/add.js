@@ -60,22 +60,23 @@ const AdminAddPosts = {
               </div>
               </div>
             </div>
+            <div class="col-span-3 sm:col-span-2">
+                  <label for="company-website" class="block text-sm font-medium text-gray-700">
+                    Giá
+                  </label>
+                  <div class="mt-1 flex rounded-md shadow-sm">
+                    <input type="text" name="price-post"  id="price-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Giá">
+                  </div>
+                </div>
               <div>
                 <label for="about" class="block text-sm font-medium text-gray-700">
                   Desc
                 </label>
                 <div class="mt-1">
-                  <textarea  id="desc-post" name="about" rows="3" class="py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="" id="desc-post" ></textarea>
+                  <textarea  id="desc-post" name="desc-post" rows="3" class="py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="" id="desc-post" ></textarea>
                 </div>
               </div>
-              <div class="col-span-3 sm:col-span-2">
-                  <label for="company-website" class="block text-sm font-medium text-gray-700">
-                    Giá
-                  </label>
-                  <div class="mt-1 flex rounded-md shadow-sm">
-                    <input type="text" name="company-website"  id="price-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Giá">
-                  </div>
-                </div>
+              
           
             </div>
             <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
@@ -91,7 +92,7 @@ const AdminAddPosts = {
     </div>
         `
   },
-  afterRender(){
+  afterRender() {
     const formAddPost = $('#form-add');
     const imgPreview = document.querySelector('#img-preview');
     const imgPost = document.querySelector('#img-post');
@@ -99,58 +100,73 @@ const AdminAddPosts = {
     const CLOUDINARY_PRESET = "qoqbcmci";
     const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dectee66b/image/upload";
 
-     // preview
-     imgPost.addEventListener('change', function(e){
-         imgPreview.src = URL.createObjectURL(e.target.files[0])
-     })
+    // preview
+    imgPost.addEventListener('change', function (e) {
+      imgPreview.src = URL.createObjectURL(e.target.files[0])
+    })
 
 
-     // validate form
-     formAddPost.validate({
-         rules: {
-             "title-post": {
-                 required: true,
-                 minlength: 5
-             }
-         },
-         messages: {
-             "title-post": {
-                 required: "Không để trống trường này!",
-                 minlength: "Ít nhất phải trên 5 ký tự"
-             }
-         },
-         submitHandler: () => {
-             async function handleAddPost(){
-                         // Lấy giá trị của input file
-                 const file = document.querySelector('#img-post').files[0];
-                 if(file){
-                     // Gắn vào đối tượng formData
-                     const formData = new FormData();
-                     formData.append('file', file);
-                     formData.append('upload_preset', CLOUDINARY_PRESET);
-                     
+    // validate form
+    formAddPost.validate({
+      rules: {
+        "title-post": {
+          required: true,
+          minlength: 5
+        },
+        "price-post": {
+          required: true,
+          minlength: 5
+        },
+        "desc-post": {
+          required: true,
+          minlength: 5
+        }
+      },
+      messages: {
+        "title-post": {
+          required: "Không để trống trường này!",
+          minlength: "Ít nhất phải trên 5 ký tự"
+        },
+        "desc-post": {
+          required: "Không để trống trường này!",
+        },
+        "price-post": {
+          required: "Không để trống trường này!",
+        },
 
-                     // call api cloudinary, để upload ảnh lên
-                     const { data } = await axios.post(CLOUDINARY_API_URL,formData, {
-                         headers: {
-                             "Content-Type": "application/form-data"
-                         }
-                     });
-                     imgLink = data.url
-                 }
-                 
-                 // call API thêm bài viết
-                 add({
-                     name: document.querySelector('#title-post').value, // iphone x plus 10
-                     img: imgLink ||  "",
-                     desc: document.querySelector('#desc-post').value,
-                     price: document.querySelector('#price-post').value
-                 })
-                 document.location.href = "/admin/sanpham";
-             }
-             handleAddPost();
-         }
-     })
- }
+      },
+      submitHandler: () => {
+        async function handleAddPost() {
+          // Lấy giá trị của input file
+          const file = document.querySelector('#img-post').files[0];
+          if (file) {
+            // Gắn vào đối tượng formData
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('upload_preset', CLOUDINARY_PRESET);
+
+
+            // call api cloudinary, để upload ảnh lên
+            const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+              headers: {
+                "Content-Type": "application/form-data"
+              }
+            });
+            imgLink = data.url
+          }
+
+          // call API thêm bài viết
+          add({
+            name: document.querySelector('#title-post').value, // iphone x plus 10
+            img: imgLink || "",
+            desc: document.querySelector('#desc-post').value,
+            price: document.querySelector('#price-post').value
+          })
+          document.location.href = "/admin/sanpham";
+        }
+        handleAddPost();
+      }
+    })
+  }
 };
 export default AdminAddPosts;

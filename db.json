@@ -43,25 +43,18 @@
   ],
   "users": [
     {
-      "email": "abc@gmail.com",
-      "password": "$2a$10$tRDZd/b1r4Lflm393FrMmOpg/sK1.kX5dzICdgP.bJ2wMDLaz1z8y",
-      "username": "trong",
-      "phone": "1123123123",
+      "email": "dactrong2001@gmail.com",
+      "password": "$2a$10$3b/3GOKf9/fNabyaCFrh1u27co.RlSaFbOT80TbQqwLp.CR7oEoIa",
+      "username": "Nguyễn Đắc Trọng",
+      "phone": "0963209332",
       "id": 1
     },
     {
-      "email": "dactrong2001@gmail.com",
-      "password": "$2a$10$Omd5H9mI9B93XRO4Y.Dl/uXUNeKlTuyjjfYtWEoIm65yzE6NXtDY.",
-      "username": "Nguyễn Đắc Trọng",
+      "email": "trankieu2003@gmail.com",
+      "password": "$2a$10$NqSGD/S/cvQCpJaLUgwlzeWVro9pS0.CFkmXkBPRgLgkYQayd50pq",
+      "username": "trankieu2003",
       "phone": "0963209332",
       "id": 2
-    },
-    {
-      "email": "trongndph13723@fpt.edu.vn",
-      "password": "$2a$10$1iYWf7CfRwoWKgiKDC8ElOAj.4grEJIZ58kuCQpS6.iZumHrQEqwO",
-      "username": "Nguyễn Đắc Trọng",
-      "phone": "0963209332",
-      "id": 3
     }
   ],
   "products": [
@@ -80,46 +73,11 @@
       "price": "300"
     },
     {
-      "id": "26",
-      "name": "ggggggggggg updated 4",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
-      "desc": "ahihihihi",
-      "price": "400"
-    },
-    {
-      "name": "trần thị kiều",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645415167/crelhfgntw5ocxvudncs.jpg",
-      "desc": "qưewq",
-      "price": "12345",
-      "id": "DiU5-QR"
-    },
-    {
-      "name": "12345",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645415344/gp46nbfo80duqqtctxoq.jpg",
-      "desc": "ádsa",
-      "price": "1233",
-      "id": "_xkhqQV"
-    },
-    {
-      "name": "12345",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645415406/ejsnx4gktgheft9jlf4m.jpg",
-      "desc": "ádsa",
-      "price": "1233",
-      "id": "7RVChVC"
-    },
-    {
-      "name": "213123213",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645415449/kyq2qxqhlllugmjqywxd.jpg",
-      "desc": "123",
-      "price": "2132",
-      "id": "LFK4JHK"
-    },
-    {
-      "name": "1234567",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645415504/otvzycqoa8km3gbwggng.jpg",
-      "desc": "234",
-      "price": "12312",
-      "id": "HQXN_9v"
+      "name": "Quần áo KaKI",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645422607/xv3vxlhszojo9tdjqw2y.jpg",
+      "desc": "Hàng đẹp",
+      "price": "324645",
+      "id": "w_Vihbq"
     }
   ],
   "categorie": [

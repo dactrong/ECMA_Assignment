@@ -23,7 +23,7 @@ const print = async (content, id) => {
     document.getElementById("app").innerHTML = await content.render(id);
     if(content.afterRender) await content.afterRender(id);
 };
-router.on("/dac/*", () => {}, {
+router.on("/admin/*", () => {}, {
     before: (done) =>{ 
         if(localStorage.getItem('user')){
             console.log('ahihi');
