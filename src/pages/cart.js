@@ -4,12 +4,12 @@ import { reRender } from "../utils";
 import { decreaseQuantity, increaseQuantity, removeItemInCart } from "../utils/cart";
 
 const CartPage = {
-    render(){
-        let cart = [];
-        if(localStorage.getItem('cart')){
-            cart = JSON.parse(localStorage.getItem('cart'));
-        }
-        return /*html*/`
+  render() {
+    let cart = [];
+    if (localStorage.getItem('cart')) {
+      cart = JSON.parse(localStorage.getItem('cart'));
+    }
+    return /*html*/`
 
         ${Header.render()}
         <div class="flex flex-col">
@@ -77,27 +77,27 @@ const CartPage = {
         ${Footer.render()}
             
         `
-    },
-    afterRender(){
-        const btns = document.querySelectorAll( '.btn');
-        btns.forEach(button => {
-            button.addEventListener('click', function(){
-                    const id = button.dataset.id;
-                    if(button.classList.contains('btn-increase')){
-                        increaseQuantity(id, () => {
-                            reRender(CartPage, "#app");
-                        });
-                    } else if (button.classList.contains('btn-decrease')){
-                        decreaseQuantity(id, () => {
-                            reRender(CartPage, "#app");
-                        });
-                    } else { 
-                        removeItemInCart(id,  () => {
-                            reRender(CartPage, "#app");
-                    })
-                }
-            })
-        })
-    }
+  },
+  afterRender() {
+    const btns = document.querySelectorAll('.btn');
+    btns.forEach(button => {
+      button.addEventListener('click', function () {
+        const id = button.dataset.id;
+        if (button.classList.contains('btn-increase')) {
+          increaseQuantity(id, () => {
+            reRender(CartPage, "#app");
+          });
+        } else if (button.classList.contains('btn-decrease')) {
+          decreaseQuantity(id, () => {
+            reRender(CartPage, "#app");
+          });
+        } else {
+          removeItemInCart(id, () => {
+            reRender(CartPage, "#app");
+          })
+        }
+      })
+    })
+  }
 }
 export default CartPage;

@@ -1,10 +1,12 @@
 import axios from "axios";
-import { add } from "../../../api/posts";
+import { add } from "../../../api/product";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 import Navadmin from "../../../components/navAdmin";
 
 const AdminAddPosts = {
-    async render(){
-        return `
+  async render() {
+    return /*html*/`
         <div class="min-h-full">
         ${Navadmin.render()}
         <header class="bg-white shadow">
@@ -64,6 +66,14 @@ const AdminAddPosts = {
                   <textarea  id="desc-post" name="about" rows="3" class="py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="" id="desc-post" ></textarea>
                 </div>
               </div>
+              <div class="col-span-3 sm:col-span-2">
+                  <label for="company-website" class="block text-sm font-medium text-gray-700">
+                    Giá
+                  </label>
+                  <div class="mt-1 flex rounded-md shadow-sm">
+                    <input type="text" name="company-website"  id="price-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Giá">
+                  </div>
+                </div>
           
             </div>
             <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
@@ -78,37 +88,48 @@ const AdminAddPosts = {
         </main>
     </div>
         `
-    },
-    afterRender(){
-       const formAddPost = document.querySelector('#form-add');
-       const CLOUDINARY_PRESET = "qoqbcmci";
-       const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dectee66b/image/upload";
+  },
+  afterRender() {
+    const formAddPost = document.querySelector('#form-add');
+    const CLOUDINARY_PRESET = "qoqbcmci";
+    const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dectee66b/image/upload";
 
 
-       formAddPost.addEventListener('submit', async function(e){
-            e.preventDefault();
+    formAddPost.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      try {
+        // Lấy giá trị của input file
+        const file = document.querySelector('#img-post').files[0];
+        // Gắn vào đối tượng formData
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('upload_preset', CLOUDINARY_PRESET);
 
-            // Lấy giá trị của input file
-            const file = document.querySelector('#img-post').files[0];
-            // Gắn vào đối tượng formData
-            const formData = new FormData();
-            formData.append('file', file);
-            formData.append('upload_preset', CLOUDINARY_PRESET);
-            
 
-            // call api cloudinary, để upload ảnh lên
-            const { data } = await axios.post(CLOUDINARY_API_URL,formData, {
-                headers: {
-                    "Content-Type": "application/form-data"
-                }
-            });
-            // call API thêm bài viết
-            add({
-                title: document.querySelector('#title-post').value,
-                img: data.url,
-                desc: document.querySelector('#desc-post').value
-            })
-       });
-    }
+        // call api cloudinary, để upload ảnh lên
+        const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+          headers: {
+            "Content-Type": "application/form-data"
+          }
+        });
+        // call API thêm bài viết
+        add({
+          name: document.querySelector('#title-post').value,
+          img: data.url,
+          desc: document.querySelector('#desc-post').value,
+          price: document.querySelector('#price-post').value
+        });
+        if ({ data }) {
+          toastr.success("Thêm mới sản phẩm thành công");
+          setTimeout(() => {
+            document.location.href = "/admin/sanpham";
+          }, 1000);
+        }
+      } catch (error) {
+        toastr.error(error.response.data);
+        $("#form-add").reset();
+      }
+    });
+  },
 };
 export default AdminAddPosts;

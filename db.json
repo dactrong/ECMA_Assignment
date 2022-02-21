@@ -1,28 +1,16 @@
 {
   "posts": [
     {
-      "id": "qrPABbo",
-      "title": "Nguyễn Đắc Trọng yêu trần thih kiều",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645348324/jkwyanhcuflw4cptxlfh.jpg",
-      "desc": "đẹp zai"
-    },
-    {
       "id": "3hCmqwU",
-      "title": "trần thị kiềusadsd",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645347567/jaa1jpk2q2nd47m2qkj9.jpg",
-      "desc": "sdf"
+      "title": "kieu xinh gai",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645373030/trmdrpqcfcomdtjtzygi.jpg",
+      "desc": "sdfsdfdsfds"
     },
     {
-      "title": "new post 2áds",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645346634/a5xu1kzoijgf5fhqghpo.jpg",
-      "desc": "AsẤsáds",
-      "id": "xhyuDtF"
-    },
-    {
+      "id": "jxbvIMD",
       "title": "áds",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645346725/zj20ienslir6ce7hskto.jpg",
-      "desc": "ÁDSDAS",
-      "id": "jxbvIMD"
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645373040/bahipc3cnrmr1naahuui.jpg",
+      "desc": "ÁDSDAS"
     },
     {
       "title": "trần thị kiều",
@@ -31,10 +19,16 @@
       "id": "TisGjI-"
     },
     {
-      "title": "Nguyễn Đắc Trọng",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645347063/tuzid0zujl46qwfyqnpq.jpg",
-      "desc": "sdfsdf",
-      "id": "BSXdMSA"
+      "title": "trần thị kiều",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645368786/pbtgf4rppugad5tgw9zb.jpg",
+      "desc": "asdsd",
+      "id": "vFt955z"
+    },
+    {
+      "title": "phương ngu vãi cứt",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645373057/c4tbbaksam3cafseipwl.jpg",
+      "desc": "ass",
+      "id": "7jucUDX"
     }
   ],
   "catePosts": [
@@ -72,54 +66,36 @@
   ],
   "products": [
     {
-      "id": "23",
-      "name": "ggggggggggg updated 1",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
-      "desc": "ahihihihi",
-      "price": "100"
+      "name": "trần thị kiều",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645405926/sooux7yrdtkdqpi7fyca.jpg",
+      "desc": "ưer",
+      "price": "trần thị kiều",
+      "id": "2Yz5zHN"
     },
     {
-      "id": "24",
-      "name": "ggggggggggg updated 2",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
-      "desc": "ahihihihi",
-      "price": "200"
-    },
-    {
-      "id": "25",
-      "name": "ggggggggggg updated 3",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
-      "desc": "ahihihihi",
-      "price": "300"
-    },
-    {
-      "id": "26",
-      "name": "ggggggggggg updated 4",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
-      "desc": "ahihihihi",
-      "price": "400"
+      "name": "Nguyeecn ĐẮc Trọng",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645406041/wovlqvi6tnt9nii9dyty.jpg",
+      "desc": "ừ",
+      "price": "123456",
+      "id": "n5NQtdV"
     }
   ],
   "categorie": [
     {
-      "title": "ád",
-      "id": 1
+      "id": 2,
+      "title": "tủ lạnh"
     },
     {
-      "title": "ád",
-      "id": 2
+      "title": "edrt",
+      "id": 7
     },
     {
-      "title": "ád",
-      "id": 3
+      "title": "Kiều",
+      "id": 8
     },
     {
-      "title": "qưe",
-      "id": 4
-    },
-    {
-      "title": "hú hòa",
-      "id": 5
+      "title": "trần thị kiều",
+      "id": 9
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { getAll , remove} from "../../../api/posts";
+import { getAll , remove} from "../../../api/product";
 import Navadmin from "../../../components/navAdmin";
 
 const AdminPosts = {
@@ -14,7 +14,7 @@ const AdminPosts = {
             </h1>
             <div class="ml-80">
                 <span class="sm:ml-3">
-                  <a href="posts/add">
+                  <a href="/admin/posts/add">
                     <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                           Thêm Mới
                       </button>
@@ -74,7 +74,7 @@ const AdminPosts = {
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
                           <div class="text-sm text-gray-900 py-30">
-                              <p>${post.title}</p>
+                              <p>${post.name}</p>
                           </div>
                         <td class="px-6 py-4 whitespace-nowrap">
                           <div class="text-sm text-gray-900 py-30">
@@ -109,6 +109,7 @@ const AdminPosts = {
             const confirm = window.confirm("Bạn có chắc chắn xóa không !");
             if (confirm) {
               remove(id).then(() => alert("Da xoa thanh cong"))
+              document.location.href = "/admin/sanpham";
             }
     
           })

@@ -12,6 +12,10 @@ import AdminAddPosts from "./pages/admin/posts/add";
 import Navadmin from "./components/navAdmin";
 import NotFoundPage from "./pages/notFound";
 import AdminEditposts from "./pages/admin/posts/edit";
+import Dashboard from "./pages/admin/dashboard";
+import NewsAddCategory from "./pages/admin/category/add";
+import AdminCategory from "./pages/admin/category";
+import AdminEditCategory from "./pages/admin/category/edit";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -38,9 +42,13 @@ router.on({
     "/admin": () => print(Navadmin),
     "/products": () => print(ProductPage),
     "/products/:id": ({data}) => print(ProductDetailPage, data.id),
-    "/admin/posts": () =>print(AdminPosts),
+    "/admin/dashboard": () =>print(Dashboard),
+    "/admin/danhmuc": () =>print(AdminCategory),
+    "/admin/category/add": () =>print(NewsAddCategory),
+    "/admin/sanpham": () =>print(AdminPosts),
     "/admin/posts/add": () =>print(AdminAddPosts),
     "/admin/posts/:id/edit": ({data}) =>print(AdminEditposts, data.id),
+    "/admin/category/:id/edit": ({data}) =>print(AdminEditCategory, data.id),
     "/signup": () => print(Signup),
     "/signin": () => print(Signin),
     "/cart": () => print(CartPage)

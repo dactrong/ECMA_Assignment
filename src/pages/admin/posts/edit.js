@@ -1,9 +1,11 @@
 import axios from "axios";
-import { edit, get } from "../../../api/posts";
+import { edit, get } from "../../../api/product";
 import Navadmin from "../../../components/navAdmin";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 const AdminEditposts = {
-    async render(id){
+    async render(id) {
         const { data } = await get(id);
         console.log(data);
         return /*html*/`
@@ -31,7 +33,7 @@ const AdminEditposts = {
                                                     Tiêu Đề
                                                 </label>
                                                 <div class="mt-1 flex rounded-md shadow-sm">
-                                                    <input type="text" value="${data.title}" name="company-website"
+                                                    <input type="text" value="${data.name}" name="company-website"
                                                         id="title-post"
                                                         class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
                                                         placeholder="Title">
@@ -81,37 +83,47 @@ const AdminEditposts = {
     <div>
         `
     },
-    afterRender(id){
-       const formEditPost = document.querySelector('#form-edit');
-       const CLOUDINARY_PRESET = "qoqbcmci";
-       const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dectee66b/image/upload";
+    afterRender(id) {
+        const formEditPost = document.querySelector('#form-edit');
+        const CLOUDINARY_PRESET = "qoqbcmci";
+        const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dectee66b/image/upload";
 
 
-       formEditPost.addEventListener('submit', async function(e){
+        formEditPost.addEventListener('submit', async function (e) {
             e.preventDefault();
+            try {
+                // Lấy giá trị của input file
+                const file = document.querySelector('#img-post').files[0];
+                // Gắn vào đối tượng formData
+                const formData = new FormData();
+                formData.append('file', file);
+                formData.append('upload_preset', CLOUDINARY_PRESET);
 
-            // Lấy giá trị của input file
-            const file = document.querySelector('#img-post').files[0];
-            // Gắn vào đối tượng formData
-            const formData = new FormData();
-            formData.append('file', file);
-            formData.append('upload_preset', CLOUDINARY_PRESET);
-            
 
-            // call api cloudinary, để upload ảnh lên
-            const { data } = await axios.post(CLOUDINARY_API_URL,formData, {
-                headers: {
-                    "Content-Type": "application/form-data"
+                // call api cloudinary, để upload ảnh lên
+                const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+                    headers: {
+                        "Content-Type": "application/form-data"
+                    }
+                });
+                // call API thêm bài viết
+                edit({
+                    id: id,
+                    name: document.querySelector('#title-post').value,
+                    img: data.url,
+                    desc: document.querySelector('#desc-post').value
+
+                });
+                if ({ data }) {
+                    toastr.success("Cập nhật danh mục thành công, chuyển trang sau 2s");
+                    setTimeout(() => {
+                        document.location.href = "/admin/sanpham";
+                    }, 1000);
                 }
-            });
-            // call API thêm bài viết
-            edit({
-                id: id,
-                title: document.querySelector('#title-post').value,
-                img: data.url,
-                desc: document.querySelector('#desc-post').value
-            })
-       });
-    }
+            } catch (error) {
+                toastr.error(error.response.data);
+            }
+        });
+    },
 };
 export default AdminEditposts;
