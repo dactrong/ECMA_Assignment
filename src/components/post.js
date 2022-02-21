@@ -3,6 +3,7 @@ const Post ={
         return /*html*/`
         
         <div class="bg-white">
+        
         <div class="pt-6">
       
           <!-- Image gallery -->

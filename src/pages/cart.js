@@ -109,6 +109,7 @@ ${Header.render()}
         `
   },
   afterRender() {
+    Header.afterRender();
     const btns = document.querySelectorAll('.btn');
 
     btns.forEach(button => {

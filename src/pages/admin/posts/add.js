@@ -137,16 +137,15 @@ const AdminAddPosts = {
       },
       submitHandler: () => {
         async function handleAddPost() {
-          // Lấy giá trị của input file
+         
           const file = document.querySelector('#img-post').files[0];
           if (file) {
-            // Gắn vào đối tượng formData
+            
             const formData = new FormData();
             formData.append('file', file);
             formData.append('upload_preset', CLOUDINARY_PRESET);
 
 
-            // call api cloudinary, để upload ảnh lên
             const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
               headers: {
                 "Content-Type": "application/form-data"
@@ -155,9 +154,8 @@ const AdminAddPosts = {
             imgLink = data.url
           }
 
-          // call API thêm bài viết
           add({
-            name: document.querySelector('#title-post').value, // iphone x plus 10
+            name: document.querySelector('#title-post').value, 
             img: imgLink || "",
             desc: document.querySelector('#desc-post').value,
             price: document.querySelector('#price-post').value

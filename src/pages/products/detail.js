@@ -178,6 +178,7 @@ ${Footer.render()}
 `;
 },
 afterRender() {
+    Header.afterRender();
         const btnAddToCart = document.querySelector('#btnAddToCart');
             const id = btnAddToCart.dataset.id;
                 const inputValue = document.querySelector('#inputValue');
