@@ -18,7 +18,6 @@ const Header = {
      
                <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Trang chủ</a>
                <a href="/products" class="text-base font-medium text-gray-500 hover:text-gray-900"> Sản phẩm </a>
-               <a href="/about" class="text-base font-medium text-gray-500 hover:text-gray-900"> Liên hệ </a>
                <a href="/cart" class="text-base font-medium text-gray-500 hover:text-gray-900"> Giỏ hàng </a>
                <a href="/admin" class="text-base font-medium text-gray-500 hover:text-gray-900"> Admin </a>
      

@@ -66,11 +66,60 @@
   ],
   "products": [
     {
-      "id": 1,
-      "name": "trần thị kiềuqưesdfsdfffffffffffffffffffffff",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645408471/attr3rdsz6ty5mvpe66v.jpg",
-      "price": "123456789",
-      "desc": "12234"
+      "id": "24",
+      "name": "ggggggggggg updated 2",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "desc": "ahihihihi",
+      "price": "200"
+    },
+    {
+      "id": "25",
+      "name": "ggggggggggg updated 3",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "desc": "ahihihihi",
+      "price": "300"
+    },
+    {
+      "id": "26",
+      "name": "ggggggggggg updated 4",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "desc": "ahihihihi",
+      "price": "400"
+    },
+    {
+      "name": "trần thị kiều",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645415167/crelhfgntw5ocxvudncs.jpg",
+      "desc": "qưewq",
+      "price": "12345",
+      "id": "DiU5-QR"
+    },
+    {
+      "name": "12345",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645415344/gp46nbfo80duqqtctxoq.jpg",
+      "desc": "ádsa",
+      "price": "1233",
+      "id": "_xkhqQV"
+    },
+    {
+      "name": "12345",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645415406/ejsnx4gktgheft9jlf4m.jpg",
+      "desc": "ádsa",
+      "price": "1233",
+      "id": "7RVChVC"
+    },
+    {
+      "name": "213123213",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645415449/kyq2qxqhlllugmjqywxd.jpg",
+      "desc": "123",
+      "price": "2132",
+      "id": "LFK4JHK"
+    },
+    {
+      "name": "1234567",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645415504/otvzycqoa8km3gbwggng.jpg",
+      "desc": "234",
+      "price": "12312",
+      "id": "HQXN_9v"
     }
   ],
   "categorie": [
