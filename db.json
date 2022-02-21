@@ -66,18 +66,11 @@
   ],
   "products": [
     {
-      "name": "trần thị kiều",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645405926/sooux7yrdtkdqpi7fyca.jpg",
-      "desc": "ưer",
-      "price": "trần thị kiều",
-      "id": "2Yz5zHN"
-    },
-    {
-      "name": "Nguyeecn ĐẮc Trọng",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645406041/wovlqvi6tnt9nii9dyty.jpg",
-      "desc": "ừ",
-      "price": "123456",
-      "id": "n5NQtdV"
+      "id": 1,
+      "name": "trần thị kiềuqưesdfsdfffffffffffffffffffffff",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645408471/attr3rdsz6ty5mvpe66v.jpg",
+      "price": "123456789",
+      "desc": "12234"
     }
   ],
   "categorie": [

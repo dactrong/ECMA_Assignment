@@ -47,12 +47,22 @@ const AdminEditposts = {
                                                     Ảnh
                                                 </label>
                                                 <div class="mt-1 flex rounded-md shadow-sm">
-                                                    <img src="${data.img}" alt="" width="100px">
+                                                    <img src="${data.img}" alt="" width="100px" id ="img-preview">
                                                     <input type="file" name="company-website" id="img-post"
                                                         class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
                                                         placeholder="Title">
     
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="about" class="block text-sm font-medium text-gray-700">
+                                                Desc
+                                            </label>
+                                            <div class="mt-1">
+                                                <input type="number" value="${data.price}" name="company-website" id="price-post"
+                                                    class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                                                    placeholder="Title">
                                             </div>
                                         </div>
                                         <div>
@@ -83,47 +93,53 @@ const AdminEditposts = {
     <div>
         `
     },
-    afterRender(id) {
+    afterRender(id){
         const formEditPost = document.querySelector('#form-edit');
+        const imgPreview = document.querySelector('#img-preview');
+        const imgPost = document.querySelector('#img-post');
+        let imgLink = "";
+ 
+ 
         const CLOUDINARY_PRESET = "qoqbcmci";
         const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dectee66b/image/upload";
-
-
-        formEditPost.addEventListener('submit', async function (e) {
-            e.preventDefault();
-            try {
-                // Lấy giá trị của input file
-                const file = document.querySelector('#img-post').files[0];
-                // Gắn vào đối tượng formData
-                const formData = new FormData();
-                formData.append('file', file);
-                formData.append('upload_preset', CLOUDINARY_PRESET);
-
-
-                // call api cloudinary, để upload ảnh lên
-                const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
-                    headers: {
-                        "Content-Type": "application/form-data"
-                    }
-                });
-                // call API thêm bài viết
-                edit({
-                    id: id,
-                    name: document.querySelector('#title-post').value,
-                    img: data.url,
-                    desc: document.querySelector('#desc-post').value
-
-                });
-                if ({ data }) {
-                    toastr.success("Cập nhật danh mục thành công, chuyển trang sau 2s");
-                    setTimeout(() => {
-                        document.location.href = "/admin/sanpham";
-                    }, 1000);
-                }
-            } catch (error) {
-                toastr.error(error.response.data);
-            }
+ 
+         // preview
+         imgPost.addEventListener('change', function(e){
+             imgPreview.src = URL.createObjectURL(e.target.files[0])
+         })
+ 
+ 
+         formEditPost.addEventListener('submit', async function(e){
+             e.preventDefault();
+             
+             // Lấy giá trị của input file
+             const file = document.querySelector('#img-post').files[0];
+             if(file){
+                 // Gắn vào đối tượng formData
+                 const formData = new FormData();
+                 formData.append('file', file);
+                 formData.append('upload_preset', CLOUDINARY_PRESET);
+                 
+ 
+                 // call api cloudinary, để upload ảnh lên
+                 const { data } = await axios.post(CLOUDINARY_API_URL,formData, {
+                     headers: {
+                         "Content-Type": "application/form-data"
+                     }
+                 });
+                 imgLink = data.url
+             }
+             
+             // call API thêm bài viết
+             edit({
+                 id,
+                 name: document.querySelector('#title-post').value, // iphone x plus 10
+                 img: imgLink ||  imgPreview.src,
+                 price: document.querySelector('#price-post').value,
+                 desc: document.querySelector('#desc-post').value
+             })
+             document.location.href = "/admin/sanpham";
         });
     },
-};
+  };
 export default AdminEditposts;

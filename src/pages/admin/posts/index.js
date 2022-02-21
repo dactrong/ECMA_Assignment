@@ -1,10 +1,10 @@
-import { getAll , remove} from "../../../api/product";
+import { getAll, remove } from "../../../api/product";
 import Navadmin from "../../../components/navAdmin";
 
 const AdminPosts = {
-    async render(){
-        const response = await getAll();
-        return /*html*/`
+  async render() {
+    const response = await getAll();
+    return /*html*/`
         <div class="min-h-full">
         ${Navadmin.render()}
         <header class="bg-white shadow">
@@ -48,6 +48,9 @@ const AdminPosts = {
                           Tên
                         </th>
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Giá
+                      </th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Desc
                         </th>
                        
@@ -76,6 +79,12 @@ const AdminPosts = {
                           <div class="text-sm text-gray-900 py-30">
                               <p>${post.name}</p>
                           </div>
+                         </td>
+                         <td class="px-6 py-4 whitespace-nowrap">
+                         <div class="text-sm text-gray-900 py-30">
+                             <p>${post.price}</p>
+                         </div>
+                        </td>
                         <td class="px-6 py-4 whitespace-nowrap">
                           <div class="text-sm text-gray-900 py-30">
                               <p>${post.desc}</p>
@@ -99,21 +108,21 @@ const AdminPosts = {
         </main>
     </div>
         `
-    },
-    afterRender() {
-        const buttons = document.querySelectorAll('.btn');
-        buttons.forEach(button => {
-          console.log(button);
-          button.addEventListener('click', () => {
-            const id = button.dataset.id;
-            const confirm = window.confirm("Bạn có chắc chắn xóa không !");
-            if (confirm) {
-              remove(id).then(() => alert("Da xoa thanh cong"))
-              document.location.href = "/admin/sanpham";
-            }
-    
-          })
-        })
-      }
+  },
+  afterRender() {
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+      console.log(button);
+      button.addEventListener('click', () => {
+        const id = button.dataset.id;
+        const confirm = window.confirm("Bạn có chắc chắn xóa không !");
+        if (confirm) {
+          remove(id).then(() => alert("Da xoa thanh cong"))
+          document.location.href = "/admin/sanpham";
+        }
+
+      })
+    })
+  }
 };
 export default AdminPosts;

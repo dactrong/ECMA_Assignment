@@ -3,6 +3,8 @@ import { add } from "../../../api/product";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 import Navadmin from "../../../components/navAdmin";
+import $ from "jquery";
+import validate from "jquery-validation";
 
 const AdminAddPosts = {
   async render() {
@@ -44,7 +46,7 @@ const AdminAddPosts = {
                     Tiêu Đề
                   </label>
                   <div class="mt-1 flex rounded-md shadow-sm">
-                    <input type="text" name="company-website"  id="title-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title">
+                    <input type="text" name="title-post"  id="title-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title">
                   </div>
                 </div>
               </div>
@@ -54,7 +56,7 @@ const AdminAddPosts = {
                   Ảnh
                 </label>
                 <div class="mt-1 flex rounded-md shadow-sm">
-                <input type="file" name="company-website"  id="img-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title">
+                <input type="file" name="img-post"  id="img-preview"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title">
               </div>
               </div>
             </div>
@@ -63,7 +65,7 @@ const AdminAddPosts = {
                   Desc
                 </label>
                 <div class="mt-1">
-                  <textarea  id="desc-post" name="about" rows="3" class="py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="" id="desc-post" ></textarea>
+                  <textarea  id="desc-post" name="desc-post" rows="3" class="py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="" id="desc-post" ></textarea>
                 </div>
               </div>
               <div class="col-span-3 sm:col-span-2">
@@ -71,7 +73,7 @@ const AdminAddPosts = {
                     Giá
                   </label>
                   <div class="mt-1 flex rounded-md shadow-sm">
-                    <input type="text" name="company-website"  id="price-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Giá">
+                    <input type="number" name="price-post"  id="price-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Giá">
                   </div>
                 </div>
           
@@ -90,46 +92,65 @@ const AdminAddPosts = {
         `
   },
   afterRender() {
-    const formAddPost = document.querySelector('#form-add');
+    const formAddPost = $('#form-add');
+    const imgPreview = document.querySelector('#img-preview');
+    const imgPost = document.querySelector('#img-post');
+    let imgLink = "";
+
     const CLOUDINARY_PRESET = "qoqbcmci";
     const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dectee66b/image/upload";
 
-
-    formAddPost.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      try {
-        // Lấy giá trị của input file
-        const file = document.querySelector('#img-post').files[0];
-        // Gắn vào đối tượng formData
-        const formData = new FormData();
-        formData.append('file', file);
-        formData.append('upload_preset', CLOUDINARY_PRESET);
+    // preview
+    imgPost.addEventListener('change', function (e) {
+      imgPreview.src = URL.createObjectURL(e.target.files[0])
+    })
 
 
-        // call api cloudinary, để upload ảnh lên
-        const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
-          headers: {
-            "Content-Type": "application/form-data"
-          }
-        });
-        // call API thêm bài viết
-        add({
-          name: document.querySelector('#title-post').value,
-          img: data.url,
-          desc: document.querySelector('#desc-post').value,
-          price: document.querySelector('#price-post').value
-        });
-        if ({ data }) {
-          toastr.success("Thêm mới sản phẩm thành công");
-          setTimeout(() => {
-            document.location.href = "/admin/sanpham";
-          }, 1000);
+    // validate form
+    formAddPost.validate({
+      rules: {
+        "title-post": {
+          required: true,
+          minlength: 5
         }
-      } catch (error) {
-        toastr.error(error.response.data);
-        $("#form-add").reset();
+      },
+      messages: {
+        "title-post": {
+          required: "Không để trống trường này!",
+          minlength: "Ít nhất phải trên 5 ký tự"
+        }
+      },
+      submitHandler: () => {
+        async function handleAddPost() {
+          // Lấy giá trị của input file
+          const file = document.querySelector('#img-post').files[0];
+          if (file) {
+            // Gắn vào đối tượng formData
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('upload_preset', CLOUDINARY_PRESET);
+
+
+            // call api cloudinary, để upload ảnh lên
+            const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+              headers: {
+                "Content-Type": "application/form-data"
+              }
+            });
+            imgLink = data.url
+          }
+
+          // call API thêm bài viết
+          add({
+            title: document.querySelector('#title-post').value, // iphone x plus 10
+            img: imgLink || "",
+            price: document.querySelector('#price-post').value,
+            desc: document.querySelector('#desc-post').value
+          })
+        }
+        handleAddPost();
       }
-    });
-  },
-};
-export default AdminAddPosts;
+    })
+  }
+  };
+  export default AdminAddPosts;
