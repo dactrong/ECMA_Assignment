@@ -16,6 +16,7 @@ import Dashboard from "./pages/admin/dashboard";
 import NewsAddCategory from "./pages/admin/category/add";
 import AdminCategory from "./pages/admin/category";
 import AdminEditCategory from "./pages/admin/category/edit";
+import ListUser from "./pages/admin/user";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -46,6 +47,7 @@ router.on({
     "/admin/danhmuc": () =>print(AdminCategory),
     "/admin/category/add": () =>print(NewsAddCategory),
     "/admin/sanpham": () =>print(AdminPosts),
+    "/admin/user": () =>print(ListUser),
     "/admin/posts/add": () =>print(AdminAddPosts),
     "/admin/posts/:id/edit": ({data}) =>print(AdminEditposts, data.id),
     "/admin/category/:id/edit": ({data}) =>print(AdminEditCategory, data.id),

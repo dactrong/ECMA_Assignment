@@ -4,7 +4,7 @@ import "toastr/build/toastr.min.css";
 const Header = {
   render() {
     return /* html */`
-        <div class="relative bg-white">
+    <div class="relative bg-white">
          <div class="max-w-7xl mx-auto px-4 sm:px-6">
            <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
              <div class="flex justify-start lg:w-0 lg:flex-1">
@@ -28,14 +28,17 @@ const Header = {
                <a href="/signup"
                  class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
                 Đăng kí </a>
-             </div> 
-             
+             </div>
+           </div>
+         </div>
+       </div>
+ 
            
              
            </div>
            ${localStorage.getItem('user') ? /*html*/ `
            <ul class="flex">
-             <li class="flex items-center">Xin chao <a href="/" class="block px-4 py-3 hover:bg-blue-800 hover:text-white" id="email"></a></li>
+             <li class="flex items-center">Xin chao <a href="/" class="block px-4 py-3 hover:bg-blue-800 hover:text-white" name="email" id="email"></a></li>
              <li class="flex items-center"><a class="block px-4 py-3 hover:bg-blue-800 hover:text-white" id="logout">Logout</a></li>
          </ul>
          `: ""}
@@ -44,6 +47,7 @@ const Header = {
         `;
   },
   afterRender() {
+
     // Lấy thông tin từ localStorage
     // Sử dụng JSON.parse để chuyển đổi chuỗi sang object
     const email = document.querySelector('#email');

@@ -8,3 +8,7 @@ export const signin = (account) => {
     const url = `/signin`;
     return instance.post(url, account)
 }
+export const getAll = () => {
+    const url = '/users';
+    return instance.get(url);
+}

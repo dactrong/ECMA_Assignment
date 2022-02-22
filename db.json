@@ -55,6 +55,13 @@
       "username": "trankieu2003",
       "phone": "0963209332",
       "id": 2
+    },
+    {
+      "email": "a@gmail.com",
+      "password": "$2a$10$yXNs0cDyyLVXLVEjQ2bYBuijq4sSq1eZOT4YScCeDBg0uD0KAnDxm",
+      "username": "admin",
+      "phone": "0963209332",
+      "id": 3
     }
   ],
   "products": [
@@ -123,10 +130,6 @@
     }
   ],
   "categorie": [
-    {
-      "id": 2,
-      "title": "tủ lạnh"
-    },
     {
       "title": "edrt",
       "id": 7
