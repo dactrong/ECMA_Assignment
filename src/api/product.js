@@ -12,6 +12,10 @@ export const remove = (id) => {
     const url = `/products/${id}`;
     return instance.delete(url);
 }
+export const getProInCate = (id) => {
+    const url = `/categorie/${id}?_embed=products`;
+    return instance.get(url);
+};
 export const add = (product) => {
     const url = `/products`;
     return instance.post(url, product);

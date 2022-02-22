@@ -59,74 +59,26 @@
   ],
   "products": [
     {
-      "id": 1,
-      "name": "Áo Thun Cổ Tròn 22222222222222222222222222",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645502543/ghnq4vsdg57fhlgef9nj.jpg",
-      "price": "200000",
-      "desc": "Áo Thun Cổ Tròn Đơn Giản Y Nguyên Bản Ver12 Thành phần: 100% Poly Cấu trúc dệt WAFFLE đặc biệt - Chống ngăn - Mềm mại - Tỏa nhiệt bề mặt - Co dãn tốt - Họa tiết thêu thường"
-    },
-    {
-      "name": "Áo Nhiệt",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645425276/tkcrumq8ttlpz1pnqnv0.jpg",
-      "desc": "Áo Thun Cổ Tròn Đơn Giản Y Nguyên Bản Ver12\nThành phần: 100% Poly\nCấu trúc dệt WAFFLE đặc biệt\n- Chống ngăn\n- Mềm mại\n- Tỏa nhiệt bề mặt\n- Co dãn tốt\n- Họa tiết thêu thường",
-      "price": "150000",
-      "id": 2
-    },
-    {
-      "name": "Áo sơ mi",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645425322/irfk2ojfgjlywatw7rw1.jpg",
-      "desc": "Áo Thun Cổ Tròn Đơn Giản Y Nguyên Bản Ver12\nThành phần: 100% Poly\nCấu trúc dệt WAFFLE đặc biệt\n- Chống ngăn\n- Mềm mại\n- Tỏa nhiệt bề mặt\n- Co dãn tốt\n- Họa tiết thêu thường",
+      "categoryProductId": "1",
+      "name": "ZXzXZZXz",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645543245/kre1lgyyypyljvgwrnxx.jpg",
+      "desc": "Zxzx",
       "price": "340000",
       "id": 3
-    },
-    {
-      "name": "Áo cộc tay",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645425352/uibdmkthekepist1uzkn.jpg",
-      "desc": "Áo Thun Cổ Tròn Đơn Giản Y Nguyên Bản Ver12\nThành phần: 100% Poly\nCấu trúc dệt WAFFLE đặc biệt\n- Chống ngăn\n- Mềm mại\n- Tỏa nhiệt bề mặt\n- Co dãn tốt\n- Họa tiết thêu thường",
-      "price": "1200000",
-      "id": 4
-    },
-    {
-      "name": "Áo dài tay",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645425398/dal5gsuhbjhgmxaovekp.jpg",
-      "desc": "Áo Thun Cổ Tròn Đơn Giản Y Nguyên Bản Ver12\nThành phần: 100% Poly\nCấu trúc dệt WAFFLE đặc biệt\n- Chống ngăn\n- Mềm mại\n- Tỏa nhiệt bề mặt\n- Co dãn tốt\n- Họa tiết thêu thường",
-      "price": "1234556",
-      "id": 5
-    },
-    {
-      "name": "Áo đẹp",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645425435/g5gauazcmqdtyliiutkx.jpg",
-      "desc": "Áo Thun Cổ Tròn Đơn Giản Y Nguyên Bản Ver12\nThành phần: 100% Poly\nCấu trúc dệt WAFFLE đặc biệt\n- Chống ngăn\n- Mềm mại\n- Tỏa nhiệt bề mặt\n- Co dãn tốt\n- Họa tiết thêu thường",
-      "price": "560000",
-      "id": 6
-    },
-    {
-      "name": "Áo cổ tròn",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645425459/fg7prs5ujw3p14i7qdd4.jpg",
-      "desc": "Áo Thun Cổ Tròn Đơn Giản Y Nguyên Bản Ver12\nThành phần: 100% Poly\nCấu trúc dệt WAFFLE đặc biệt\n- Chống ngăn\n- Mềm mại\n- Tỏa nhiệt bề mặt\n- Co dãn tốt\n- Họa tiết thêu thường",
-      "price": "300000",
-      "id": 7
-    },
-    {
-      "name": "Áo sơ midai tay",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645425489/kltbgci7pkbxkfs7dvb8.jpg",
-      "desc": "Áo Thun Cổ Tròn Đơn Giản Y Nguyên Bản Ver12\nThành phần: 100% Poly\nCấu trúc dệt WAFFLE đặc biệt\n- Chống ngăn\n- Mềm mại\n- Tỏa nhiệt bề mặt\n- Co dãn tốt\n- Họa tiết thêu thường",
-      "price": "4300000",
-      "id": 8
     }
   ],
   "categorie": [
     {
-      "title": "edrt",
-      "id": 7
+      "title": "Áo",
+      "id": 1
     },
     {
-      "title": "Kiều",
-      "id": 8
+      "title": "Quần",
+      "id": 2
     },
     {
-      "title": "trần thị kiều",
-      "id": 9
+      "title": "Phụ Kiện",
+      "id": 3
     }
   ]
 }

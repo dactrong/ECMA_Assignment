@@ -1,5 +1,6 @@
 import axios from "axios";
 import { add } from "../../../api/product";
+import { getAll } from "../../../api/category";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 import Navadmin from "../../../components/navAdmin";
@@ -8,6 +9,7 @@ import validate from "jquery-validation";
 
 const AdminAddPosts = {
   async render() {
+    const { data } = await getAll();
     return /*html*/`
         <div class="min-h-full">
         ${Navadmin.render()}
@@ -64,6 +66,13 @@ const AdminAddPosts = {
               </div>
             </div>
             <div class="col-span-3 sm:col-span-2">
+            <select name="" id="cateId" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md pl-[10px]">
+            ${data.map((post) => /* html */ `
+                <option value="${post.id}">${post.title}</option>
+            `).join("")}
+        </select>
+        </div>
+            <div class="col-span-3 sm:col-span-2">
                   <label for="company-website" class="block text-sm font-medium text-gray-700">
                     Giá
                   </label>
@@ -118,11 +127,11 @@ const AdminAddPosts = {
         },
         "price-post": {
           required: true,
-          minlength: 5
+    
         },
         "desc-post": {
           required: true,
-          minlength: 5
+       
         }
       },
       messages: {
@@ -158,6 +167,7 @@ const AdminAddPosts = {
           }
 
           add({
+            categoryProductId:document.querySelector("#cateId").value,
             name: document.querySelector('#title-post').value, 
             img: imgLink || "",
             desc: document.querySelector('#desc-post').value,

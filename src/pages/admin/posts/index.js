@@ -1,4 +1,5 @@
 import { getAll, remove } from "../../../api/product";
+import { get } from "../../../api/category";
 import Navadmin from "../../../components/navAdmin";
 
 const AdminPosts = {
@@ -50,6 +51,10 @@ const AdminPosts = {
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Giá
                       </th>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Danh muc
+                      </th>
+                      
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Desc
                         </th>
@@ -85,6 +90,11 @@ const AdminPosts = {
                              <p>${post.price}</p>
                          </div>
                         </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-900 py-30">
+                            <p>${post.categoryProductId}</p>
+                        </div>
+                      </td>
                         <td class="px-6 py-4 whitespace-nowrap">
                           <div class="text-sm text-gray-900 py-30">
                               <p>${post.desc}</p>
