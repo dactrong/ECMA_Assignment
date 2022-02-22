@@ -38,7 +38,7 @@ const Signin = {
               </div>
       
               <div class="text-sm">
-                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> Quên mật khẩu </a>
+                <a href="/signup" class="font-medium text-indigo-600 hover:text-indigo-500"> Tạo tài khoản  </a>
               </div>
             </div>
       
@@ -62,6 +62,7 @@ const Signin = {
         `
     },
     afterRender(){
+      
       const formSignin = document.querySelector('#formSignin');
       formSignin.addEventListener('submit', async (e) => {
           e.preventDefault();
@@ -85,6 +86,7 @@ const Signin = {
           }
           
       })
+      
   }
 }
 export default Signin;

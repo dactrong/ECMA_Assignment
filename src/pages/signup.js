@@ -69,6 +69,7 @@ const Signup = {
         `
     },
     afterRender(){
+      Header.afterRender();
       const formSignup = document.querySelector('#formSignup');
       formSignup.addEventListener('submit', async (e) => {
           e.preventDefault();

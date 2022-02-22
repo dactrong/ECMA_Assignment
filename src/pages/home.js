@@ -8,7 +8,7 @@ import Post from "../components/post";
 const HomePage = {
     async render() {
         return /* html */`
-            <div class="max-w-5xl mx-auto">
+            <div class=" mx-auto">
                 <div id="header">
                     ${Header.render()}
                 </div>

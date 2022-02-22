@@ -46,7 +46,9 @@ const AdminAddPosts = {
                     Tiêu Đề
                   </label>
                   <div class="mt-1 flex rounded-md shadow-sm">
-                    <input type="text" name="title-post"  id="title-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title">
+                    
+                  <input type="text" name="title-post"  id="title-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title">
+                  
                   </div>
                 </div>
               </div>
@@ -55,9 +57,10 @@ const AdminAddPosts = {
                 <label for="company-website" class="block text-sm font-medium text-gray-700">
                   Ảnh
                 </label>
-                <div class="mt-1 flex rounded-md shadow-sm">
-                <input type="file" name="company-website"  id="img-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title">
-              </div>
+                
+                <input type="file" name="img-post"  id="img-post"  class="py-2 px-2 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Title">
+                <img src="" alt="" id="img-preview"  width="100px">
+              
               </div>
             </div>
             <div class="col-span-3 sm:col-span-2">

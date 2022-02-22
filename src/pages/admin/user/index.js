@@ -1,4 +1,4 @@
-import { getAll} from "../../../api/user";
+import { getAll , remove} from "../../../api/user";
 import Navadmin from "../../../components/navAdmin";
 
 const ListUser = {
@@ -18,8 +18,7 @@ const ListUser = {
                     <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                           Thêm Mới
                       </button>
-                    </a>  
-                    
+                    </a>     
                 </span>
             </div>
         </div>
@@ -117,7 +116,7 @@ const ListUser = {
         const confirm = window.confirm("Bạn có chắc chắn xóa không !");
         if (confirm) {
           remove(id).then(() => alert("Da xoa thanh cong"))
-          document.location.href = "/admin/sanpham";
+          document.location.href = "/admin/user";
         }
 
       })
