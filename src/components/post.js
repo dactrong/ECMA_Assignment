@@ -65,7 +65,7 @@ const Post ={
                </span>
                <h3>
                   <a
-                     href="/products/${product.id}"
+                     href="/about/${product.id}"
                      class="
                      font-semibold
                      text-xl

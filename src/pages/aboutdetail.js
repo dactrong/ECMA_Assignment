@@ -1,10 +1,10 @@
-import { getAll } from "../api/posts";
+import { get } from "../api/posts";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
-const AboutPage = {
-  async  render() {
-    const response = await getAll()
+const AboutPageDetail = {
+  async  render(id) {
+    const  response = await get(id)
         return /* html */`
         ${ await Header.render()}
         <h3 class="text-2xl font-extrabold tracking-tight text-gray-900 ">Tin tức</h3>
@@ -53,4 +53,4 @@ const AboutPage = {
         </div>`;
     },
 };
-export default AboutPage;
+export default AboutPageDetail;

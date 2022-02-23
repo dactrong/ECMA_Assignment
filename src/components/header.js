@@ -38,10 +38,10 @@ const Header = {
             <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                 <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/">Trang chủ</a></li>
                 <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/products">Sản phẩm</a></li>
-                <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/tintuc">Tin tức</a></li>
+                <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/about">Tin tức</a></li>
                 ${data.map((post) => /* html */ `
                 
-                <li><a href="/categorie/${post.id}" class="menu-item">${post.title}</a></li>
+                <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/categorie/${post.id}" class="menu-item">${post.title}</a></li>
                 `).join("")}
                 <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/admin">Admin</a></li>
               

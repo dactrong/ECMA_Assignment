@@ -21,6 +21,7 @@ import ProductList from "./pages/products/productList";
 import AdminTintuc from "./pages/admin/tintuc";
 import AdminPostsAdd from "./pages/admin/tintuc/add";
 import AdminPostsEdit from "./pages/admin/tintuc/edit";
+import AboutPageDetail from "./pages/aboutdetail";
 
 
 const router = new Navigo("/", { linksSelector: "a" });
@@ -48,6 +49,7 @@ router.on({
     "/admin": () => print(Navadmin),
     "/products": () => print(ProductPage),
     "/products/:id": ({data}) => print(ProductDetailPage, data.id),
+    "/about/:id": ({data}) => print(AboutPageDetail, data.id),
     "/admin/dashboard": () =>print(Dashboard),
     "/admin/danhmuc": () =>print(AdminCategory),
     "/admin/category/add": () =>print(NewsAddCategory),
