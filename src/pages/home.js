@@ -19,7 +19,7 @@ const HomePage = {
                     ${await NewList.render()}
                 </div>
                 <div class="banner">
-                   ${Post.render()}
+                   ${await Post.render()}
                 </div>
                 
                 ${Footer.render()}

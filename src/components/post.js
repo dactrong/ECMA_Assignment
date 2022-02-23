@@ -1,5 +1,8 @@
+import { getAll } from "../api/posts";
+
 const Post ={
-    render (){
+   async render (){
+      const response = await getAll();
         return /*html*/`
         
         <!-- ====== Blog Section Start -->
@@ -30,12 +33,14 @@ const Post ={
          </div>
       </div>
    </div>
+  
    <div class="flex flex-wrap -mx-4">
+   ${response.data.map((product) => /*html*/ `
       <div class="w-full md:w-1/2 lg:w-1/3 px-4">
          <div class="max-w-[370px] mx-auto mb-10">
             <div class="rounded overflow-hidden mb-8">
                <img
-                  src="https://cdn.tailgrids.com/1.0/assets/images/blogs/blog-01/image-01.jpg"
+                  src="${product.img}"
                   alt="image"
                   class="w-full"
                   />
@@ -60,7 +65,7 @@ const Post ={
                </span>
                <h3>
                   <a
-                     href="javascript:void(0)"
+                     href="/products/${product.id}"
                      class="
                      font-semibold
                      text-xl
@@ -73,7 +78,7 @@ const Post ={
                      hover:text-primary
                      "
                      >
-                  Meet AutoManage, the best AI management tools
+                     ${product.title}
                   </a>
                </h3>
                <p class="text-base text-body-color">
@@ -82,112 +87,12 @@ const Post ={
                </p>
             </div>
          </div>
+         
       </div>
-      <div class="w-full md:w-1/2 lg:w-1/3 px-4">
-         <div class="max-w-[370px] mx-auto mb-10">
-            <div class="rounded overflow-hidden mb-8">
-               <img
-                  src="https://cdn.tailgrids.com/1.0/assets/images/blogs/blog-01/image-02.jpg"
-                  alt="image"
-                  class="w-full"
-                  />
-            </div>
-            <div>
-               <span
-                  class="
-                  bg-primary
-                  rounded
-                  inline-block
-                  text-center
-                  py-1
-                  px-4
-                  text-xs
-                  leading-loose
-                  font-semibold
-                  text-white
-                  mb-5
-                  "
-                  >
-               Mar 15, 2023
-               </span>
-               <h3>
-                  <a
-                     href="javascript:void(0)"
-                     class="
-                     font-semibold
-                     text-xl
-                     sm:text-2xl
-                     lg:text-xl
-                     xl:text-2xl
-                     mb-4
-                     inline-block
-                     text-dark
-                     hover:text-primary
-                     "
-                     >
-                  How to earn more money as a wellness coach
-                  </a>
-               </h3>
-               <p class="text-base text-body-color">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-               </p>
-            </div>
-         </div>
-      </div>
-      <div class="w-full md:w-1/2 lg:w-1/3 px-4">
-         <div class="max-w-[370px] mx-auto mb-10">
-            <div class="rounded overflow-hidden mb-8">
-               <img
-                  src="https://cdn.tailgrids.com/1.0/assets/images/blogs/blog-01/image-03.jpg"
-                  alt="image"
-                  class="w-full"
-                  />
-            </div>
-            <div>
-               <span
-                  class="
-                  bg-primary
-                  rounded
-                  inline-block
-                  text-center
-                  py-1
-                  px-4
-                  text-xs
-                  leading-loose
-                  font-semibold
-                  text-white
-                  mb-5
-                  "
-                  >
-               Jan 05, 2023
-               </span>
-               <h3>
-                  <a
-                     href="javascript:void(0)"
-                     class="
-                     font-semibold
-                     text-xl
-                     sm:text-2xl
-                     lg:text-xl
-                     xl:text-2xl
-                     mb-4
-                     inline-block
-                     text-dark
-                     hover:text-primary
-                     "
-                     >
-                  The no-fuss guide to upselling and cross selling
-                  </a>
-               </h3>
-               <p class="text-base text-body-color">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-               </p>
-            </div>
-         </div>
-      </div>
-   </div>
+      `).join("")}
+     </div>
+   
+   
 </div>
 </section>
         `

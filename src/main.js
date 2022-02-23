@@ -18,6 +18,10 @@ import AdminCategory from "./pages/admin/category";
 import AdminEditCategory from "./pages/admin/category/edit";
 import ListUser from "./pages/admin/user";
 import ProductList from "./pages/products/productList";
+import AdminTintuc from "./pages/admin/tintuc";
+import AdminPostsAdd from "./pages/admin/tintuc/add";
+import AdminPostsEdit from "./pages/admin/tintuc/edit";
+
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -48,9 +52,12 @@ router.on({
     "/admin/danhmuc": () =>print(AdminCategory),
     "/admin/category/add": () =>print(NewsAddCategory),
     "/admin/sanpham": () =>print(AdminPosts),
+    "/admin/post": () =>print(AdminTintuc),
     "/admin/user": () =>print(ListUser),
     "/admin/posts/add": () =>print(AdminAddPosts),
+    "/admin/tintuc/add": () =>print(AdminPostsAdd),
     "/admin/posts/:id/edit": ({data}) =>print(AdminEditposts, data.id),
+    "/admin/tintuc/:id/edit": ({data}) =>print(AdminPostsEdit, data.id),
     "/admin/category/:id/edit": ({data}) =>print(AdminEditCategory, data.id),
     "/signup": () => print(Signup),
     "/signin": () => print(Signin),

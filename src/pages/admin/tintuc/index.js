@@ -1,8 +1,7 @@
-import { getAll, remove } from "../../../api/product";
-import { get } from "../../../api/category";
+import { getAll, remove } from "../../../api/posts";
 import Navadmin from "../../../components/navAdmin";
 
-const AdminPosts = {
+const AdminTintuc = {
   async render() {
     const response = await getAll();
     return /*html*/`
@@ -15,7 +14,7 @@ const AdminPosts = {
             </h1>
             <div class="ml-80">
                 <span class="sm:ml-3">
-                  <a href="/admin/posts/add">
+                  <a href="/admin/tintuc/add">
                     <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                           Thêm Mới
                       </button>
@@ -48,13 +47,7 @@ const AdminPosts = {
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Tên
                         </th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Giá
-                      </th>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Danh muc
-                      </th>
-                      
+                    
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Desc
                         </th>
@@ -67,7 +60,7 @@ const AdminPosts = {
                       ${response.data.map((post, index) => /* html */`
                       <tr>
                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                          <a href="/admin/posts/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900 bg-lime-600 p-2 px-4 rounded-lg">Edit</a>
+                          <a href="/admin/tintuc/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900 bg-lime-600 p-2 px-4 rounded-lg">Edit</a>
                           <button data-id="${post.id}" class="btn btn-remove bg-red-600 p-2 px-4 rounded-lg">Xóa</button>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -82,22 +75,15 @@ const AdminPosts = {
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
                           <div class="text-sm text-gray-900 py-30">
-                              <p>${post.name}</p>
+                              <p>${post.title}</p>
                           </div>
                          </td>
-                         <td class="px-6 py-4 whitespace-nowrap">
-                         <div class="text-sm text-gray-900 py-30">
-                             <p>${post.price}</p>
-                         </div>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="text-sm text-gray-900 py-30">
-                            <p>${post.categorieId}</p>
-                        </div>
-                      </td>
+                        
+                        
                         <td class="px-6 py-4 whitespace-nowrap">
                           <div class="text-sm text-gray-900 py-30">
-                              <p>${post.desc}</p>
+                          <textarea name="" id="" cols="30" rows="10">${post.desc}</textarea>
+                              <p></p>
                           </div>
                         </td>
                         
@@ -128,11 +114,11 @@ const AdminPosts = {
         const confirm = window.confirm("Bạn có chắc chắn xóa không !");
         if (confirm) {
           remove(id).then(() => alert("Da xoa thanh cong"))
-          document.location.href = "/admin/sanpham";
+          document.location.href = "/admin/post";
         }
 
       })
     })
   }
 };
-export default AdminPosts;
+export default AdminTintuc;
