@@ -8,6 +8,7 @@ import "toastr/build/toastr.min.css";
 const AdminEditposts = {
     async render(id) {
         const { data } = await get(id);
+        const categorie = await getAll();
         console.log(data);
         return /*html*/`
         <div class="min-h-full">
@@ -68,8 +69,8 @@ const AdminEditposts = {
                                         </div>
                                         <div class="col-span-3 sm:col-span-2">
                                             <select name="" id="cateId" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md pl-[10px]">
-                                            ${data.map((post) => /* html */ `
-                                                <option value="${post.id}">${post.title}</option>
+                                            ${categorie.data.map((post) => /* html */ `
+                                            <option value="${post.id}" ${post.id === data.categoryProductId ? "selected" : ""}>${post.title}</option>
                                             `).join("")}
                                         </select>
                                         </div>

@@ -4,7 +4,7 @@ import { reRender } from "../utils";
 import { decreaseQuantity, increaseQuantity, removeItemInCart } from "../utils/cart";
 
 const CartPage = {
-    render() {
+  async  render() {
         let tong = 0;
         let cart = [];
         if (localStorage.getItem('cart')) {
@@ -12,7 +12,7 @@ const CartPage = {
         }
         return /*html*/`
 
-${Header.render()}
+${await Header.render()}
 <div class="flex flex-col">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">

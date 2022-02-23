@@ -47,12 +47,12 @@
   ],
   "products": [
     {
-      "categorieId": 1,
+      "id": 1,
+      "categorieId": 2,
       "name": "Áo Thun Cổ Tròn Đơn Giản AS01",
       "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645596588/l843hsz3i8dpbavmpbaz.jpg",
-      "desc": "Chất liệu: Cotton 2 chiều\nThành phần: 100% Cotton\n- Co dãn 2 chiều\n- Thấm hút mồ hôi tốt mang lại cảm giác thoáng mát\nHDSD:\n- Giặt tay để sản phẩm giữ được độ bền cao\n- Ủi sản phẩm bằng bàn ủi hơi nước hoặc ủi khi sản phẩm còn ẩm để dễ dàng làm phẳng",
       "price": "1200000",
-      "id": 1
+      "desc": "Chất liệu: Cotton 2 chiềuThành phần: 100% Cotton- Co dãn 2 chiều- Thấm hút mồ hôi tốt mang lại cảm giác thoáng mátHDSD:- Giặt tay để sản phẩm giữ được độ bền cao- Ủi sản phẩm bằng bàn ủi hơi nước hoặc ủi khi sản phẩm còn ẩm để dễ dàng làm phẳng"
     },
     {
       "categorieId": 2,
@@ -63,20 +63,20 @@
       "id": 2
     },
     {
-      "categorieId": 3,
+      "id": 3,
+      "categorieId": 2,
       "name": "Áo sơ mi",
       "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645596646/sqspelg9adzpdiyfsszc.jpg",
-      "desc": "Chất liệu: Cotton 2 chiều\nThành phần: 100% Cotton\n- Co dãn 2 chiều\n- Thấm hút mồ hôi tốt mang lại cảm giác thoáng mát\nHDSD:\n- Giặt tay để sản phẩm giữ được độ bền cao\n- Ủi sản phẩm bằng bàn ủi hơi nước hoặc ủi khi sản phẩm còn ẩm để dễ dàng làm phẳng",
       "price": "560000",
-      "id": 3
+      "desc": "Chất liệu: Cotton 2 chiềuThành phần: 100% Cotton- Co dãn 2 chiều- Thấm hút mồ hôi tốt mang lại cảm giác thoáng mátHDSD:- Giặt tay để sản phẩm giữ được độ bền cao- Ủi sản phẩm bằng bàn ủi hơi nước hoặc ủi khi sản phẩm còn ẩm để dễ dàng làm phẳng"
     },
     {
-      "categorieId": 1,
+      "id": 4,
+      "categorieId": 2,
       "name": "Áo cộc tay",
       "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645596672/sbj7ucitjmi64ppqovin.jpg",
-      "desc": "Chất liệu: Cotton 2 chiều\nThành phần: 100% Cotton\n- Co dãn 2 chiều\n- Thấm hút mồ hôi tốt mang lại cảm giác thoáng mát\nHDSD:\n- Giặt tay để sản phẩm giữ được độ bền cao\n- Ủi sản phẩm bằng bàn ủi hơi nước hoặc ủi khi sản phẩm còn ẩm để dễ dàng làm phẳng",
       "price": "1200000",
-      "id": 4
+      "desc": "Chất liệu: Cotton 2 chiềuThành phần: 100% Cotton- Co dãn 2 chiều- Thấm hút mồ hôi tốt mang lại cảm giác thoáng mátHDSD:- Giặt tay để sản phẩm giữ được độ bền cao- Ủi sản phẩm bằng bàn ủi hơi nước hoặc ủi khi sản phẩm còn ẩm để dễ dàng làm phẳng"
     }
   ],
   "categorie": [
