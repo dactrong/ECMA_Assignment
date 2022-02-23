@@ -17,6 +17,7 @@ import NewsAddCategory from "./pages/admin/category/add";
 import AdminCategory from "./pages/admin/category";
 import AdminEditCategory from "./pages/admin/category/edit";
 import ListUser from "./pages/admin/user";
+import ProductList from "./pages/products/productList";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -53,7 +54,11 @@ router.on({
     "/admin/category/:id/edit": ({data}) =>print(AdminEditCategory, data.id),
     "/signup": () => print(Signup),
     "/signin": () => print(Signin),
-    "/cart": () => print(CartPage)
+    "/cart": () => print(CartPage),
+    "/categoryProducts/:id*": ({ data }) => {
+        const { id } = data;
+        print(ProductList, id);
+    }
 });
 router.resolve();
 router.notFound(() => print(NotFoundPage));

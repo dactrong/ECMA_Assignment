@@ -65,6 +65,30 @@
       "desc": "Zxzx",
       "price": "340000",
       "id": 3
+    },
+    {
+      "categoryProductId": "1",
+      "name": "Áo mới",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645585279/rsjgq6lf0suwqo0zu1ct.jpg",
+      "desc": "qưeqwe",
+      "price": "150000",
+      "id": 4
+    },
+    {
+      "categoryProductId": "2",
+      "name": "new post 2áds",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645585298/olqh3fuwwinoudw2hzbz.jpg",
+      "desc": "qưeadsads",
+      "price": "1221323",
+      "id": 5
+    },
+    {
+      "categoryProductId": "3",
+      "name": "Áo thun",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645585322/f2fak8hqwc4lylt6tvue.jpg",
+      "desc": "dưqas",
+      "price": "13123",
+      "id": 6
     }
   ],
   "categorie": [

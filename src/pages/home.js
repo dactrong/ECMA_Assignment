@@ -10,7 +10,7 @@ const HomePage = {
         return /* html */`
             <div class=" mx-auto">
                 <div id="header">
-                    ${Header.render()}
+                    ${ await Header.render()}
                 </div>
                 <div class="banner">
                    ${Banner.render()}
