@@ -55,10 +55,10 @@ router.on({
     "/signup": () => print(Signup),
     "/signin": () => print(Signin),
     "/cart": () => print(CartPage),
-    "/categoryProducts/:id*": ({ data }) => {
+    "/categorie/:id": ({ data }) => {
         const { id } = data;
         print(ProductList, id);
-    }
+    },
 });
 router.resolve();
 router.notFound(() => print(NotFoundPage));

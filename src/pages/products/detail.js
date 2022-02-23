@@ -10,7 +10,7 @@ const ProductDetailPage = {
 async render(id) {
 const { data: product } = await get(id)
 return /* html */`
-${Header.render()}
+${await Header.render()}
 <div class="">
    
     <!-- Product info -->

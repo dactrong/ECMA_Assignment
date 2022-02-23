@@ -6,7 +6,7 @@ const ProductPage = {
     async render() {
         const response = await getAll()
         return /* html */`
-        ${Header.render()}
+        ${ await Header.render()}
         ${Banner.render()}
         <div class="bg-white">
         <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">

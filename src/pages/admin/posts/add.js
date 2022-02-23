@@ -167,7 +167,7 @@ const AdminAddPosts = {
           }
 
           add({
-            categoryProductId:document.querySelector("#cateId").value,
+            categorieId: Number(document.querySelector("#cateId").value),
             name: document.querySelector('#title-post').value, 
             img: imgLink || "",
             desc: document.querySelector('#desc-post').value,

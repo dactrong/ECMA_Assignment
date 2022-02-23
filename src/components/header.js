@@ -5,7 +5,7 @@ import "toastr/build/toastr.min.css";
 const Header = {
    async render() {
     
-    const response = await getAll()
+    const {data} = await getAll()
     return /* html */`
     
     <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
@@ -34,13 +34,14 @@ const Header = {
 
             <div class="order-1 md:order-2">
             <nav>
+            
             <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                 <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/">Trang chủ</a></li>
                 <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/products">Sản phẩm</a></li>
                 <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/tintuc">Tin tức</a></li>
-               
-                ${response.data.map((post) => /* html */ `
-                <li><a href="/categoryProducts/${post.id}?_embed=products" class="menu-item">${post.title}</a></li>
+                ${data.map((post) => /* html */ `
+                
+                <li><a href="/categorie/${post.id}" class="menu-item">${post.title}</a></li>
                 `).join("")}
                 <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/admin">Admin</a></li>
               

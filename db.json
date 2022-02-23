@@ -59,36 +59,20 @@
   ],
   "products": [
     {
-      "categoryProductId": "1",
-      "name": "ZXzXZZXz",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645543245/kre1lgyyypyljvgwrnxx.jpg",
-      "desc": "Zxzx",
-      "price": "340000",
+      "categorieId": 2,
+      "name": "qưeqweqwe",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645590004/m3pfd8fxsihr1zynrhji.jpg",
+      "desc": "12312313",
+      "price": "560000",
       "id": 3
     },
     {
-      "categoryProductId": "1",
-      "name": "Áo mới",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645585279/rsjgq6lf0suwqo0zu1ct.jpg",
-      "desc": "qưeqwe",
-      "price": "150000",
+      "categorieId": 3,
+      "name": "ádas213123",
+      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645591126/q5vnwsrayjgg7dj9rf5p.jpg",
+      "desc": "123213",
+      "price": "1200000",
       "id": 4
-    },
-    {
-      "categoryProductId": "2",
-      "name": "new post 2áds",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645585298/olqh3fuwwinoudw2hzbz.jpg",
-      "desc": "qưeadsads",
-      "price": "1221323",
-      "id": 5
-    },
-    {
-      "categoryProductId": "3",
-      "name": "Áo thun",
-      "img": "http://res.cloudinary.com/dectee66b/image/upload/v1645585322/f2fak8hqwc4lylt6tvue.jpg",
-      "desc": "dưqas",
-      "price": "13123",
-      "id": 6
     }
   ],
   "categorie": [
